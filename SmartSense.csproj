@@ -1,0 +1,121 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>bdb7d709-bd1d-4c4d-9737-c2776887f67a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AdminLTE-3.1.0-rc\**" />
+    <Content Remove="AdminLTE-3.1.0-rc\**" />
+    <EmbeddedResource Remove="AdminLTE-3.1.0-rc\**" />
+    <None Remove="AdminLTE-3.1.0-rc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\tm\gulp\build.gulp.js" />
+    <None Include="wwwroot\tm\gulp\clean.gulp.js" />
+    <None Include="wwwroot\tm\gulp\pug.gulp.js" />
+    <None Include="wwwroot\tm\gulp\script.gulp.js" />
+    <None Include="wwwroot\tm\gulp\style.gulp.js" />
+    <None Include="wwwroot\tm\gulp\utils.js" />
+    <None Include="wwwroot\tm\gulp\vendor.gulp.js" />
+    <None Include="wwwroot\tm\gulp\w3c.gulp.js" />
+    <None Include="wwwroot\tm\gulp\watch.gulp.js" />
+    <None Include="wwwroot\tm\public\assets\css\theme-rtl.css.map" />
+    <None Include="wwwroot\tm\public\assets\css\theme-rtl.min.css.map" />
+    <None Include="wwwroot\tm\public\assets\css\theme.css.map" />
+    <None Include="wwwroot\tm\public\assets\css\theme.min.css.map" />
+    <None Include="wwwroot\tm\public\assets\img\.gitkeep" />
+    <None Include="wwwroot\tm\public\assets\img\favicons\site.webmanifest" />
+    <None Include="wwwroot\tm\public\assets\js\bootstrap-navbar.js" />
+    <None Include="wwwroot\tm\public\assets\js\theme.js" />
+    <None Include="wwwroot\tm\public\assets\js\theme.js.map" />
+    <None Include="wwwroot\tm\public\assets\js\theme.min.js" />
+    <None Include="wwwroot\tm\public\assets\js\theme.min.js.map" />
+    <None Include="wwwroot\tm\public\assets\video\.gitkeep" />
+    <None Include="wwwroot\tm\public\vendors\popperjs\popper.min.js" />
+    <None Include="wwwroot\tm\public\vendors\bootstrap\bootstrap.min.js" />
+    <None Include="wwwroot\tm\public\vendors\bootstrap\bootstrap.min.js.map" />
+    <None Include="wwwroot\tm\public\vendors\fontawesome\all.min.js" />
+    <None Include="wwwroot\tm\public\vendors\is\is.min.js" />
+    <None Include="wwwroot\tm\src\js\bootstrap-navbar.js" />
+    <None Include="wwwroot\tm\src\js\detector.js" />
+    <None Include="wwwroot\tm\src\js\scroll-to-top.js" />
+    <None Include="wwwroot\tm\src\js\theme.js" />
+    <None Include="wwwroot\tm\src\js\utils.js" />
+    <None Include="wwwroot\tm\src\pug\index.pug" />
+    <None Include="wwwroot\tm\src\pug\layouts\Layout.pug" />
+    <None Include="wwwroot\tm\src\pug\layouts\LayoutTheme.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\core\Background.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\core\Functions.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\core\Section.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\core\ThemeStyle.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\CountriesWeCovered.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Cta.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Events.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Footer.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\HeroHeader.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\News.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Services.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Testimonial.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\home\landing\Universities.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\navbars\NavbarExecutive.pug" />
+    <None Include="wwwroot\tm\src\pug\mixins\Variables.pug" />
+    <None Include="wwwroot\tm\src\scss\theme.css.map" />
+    <None Include="wwwroot\tm\src\scss\theme.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\.gitkeep" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_background.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_borders.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_colored-links.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_flex.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_position.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_shadow.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\helpers\_text.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_badge.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_browser-support.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_button.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_card.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_functions.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_helpers.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_hover.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_icon.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_mixed.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_mixins.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_reboot.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_search.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_testimonial.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_theme.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_utilities.scss" />
+    <None Include="wwwroot\tm\src\scss\theme\_variables.scss" />
+    <None Include="wwwroot\tm\src\scss\_bootstrap.scss" />
+    <None Include="wwwroot\tm\src\scss\_user-variables.scss" />
+    <None Include="wwwroot\tm\src\scss\_user.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="System.Net.Security" Version="4.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\tm\public\plugins\" />
+    <Folder Include="wwwroot\tm\public\vendors\%40popper\" />
+    <Folder Include="wwwroot\tm\public\vendors\popper\" />
+    <Folder Include="wwwroot\tm\src\pug\mixins\layouts\" />
+    <Folder Include="wwwroot\tm\src\pug\pages\" />
+  </ItemGroup>
+
+</Project>

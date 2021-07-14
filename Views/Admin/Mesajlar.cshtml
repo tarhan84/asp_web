@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-10 ml-auto mr-auto">
+        @if (ViewBag.mesajj != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                Mesajınız Başarıyla İletildi
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <div class="card blockquote mt-4 ml-auto mr-auto">
+            <div class="card-header">
+                <b>Mesajlar</b>  @if (ViewBag.count != 0)
+                {<p style="float:right;">@ViewBag.count  okunmamış mesaj</p>}
+            </div>
+            <div class="card-body">
+                @foreach (var mesaj in ViewBag.Mesajlar)
+                {
+                    <div class="row">
+                        @if (mesaj.Okundu == 0)
+                        {
+                            <div class="col-md-4">
+                                <p><b>@mesaj.Email</b></p>
+                            </div>
+
+                            <div class="col-md-4 align-content-center">
+                                <p><b>@mesaj.Konu</b></p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="col-md-4">
+                                <p>@mesaj.Email</p>
+                            </div>
+
+                            <div class="col-md-4 align-content-center">
+                                <p>@mesaj.Konu</p>
+                            </div>
+                        }
+
+                        <div class="col-md-4 ">
+                            <div style="float:right;">
+                                <a asp-action="mesajOku" asp-controller="Admin" asp-route-id="@mesaj.Id" class="btn btn-primary">Oku</a>
+                                <a asp-action="mesajSil" asp-controller="Admin" asp-route-id="@mesaj.Id" class="btn btn-danger">Sil</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

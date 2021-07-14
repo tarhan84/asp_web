@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Bize Ulaşın";
+}
+@model SmartSense.Models.MesajModel
+
+<div class="row">
+    <div class="col-md-2"></div>
+
+
+    <div class="col-md-4 mt-5">
+         
+        <img src="~/img/gmail.png" class="d-inline-block " />
+        <p class="d-inline-block ml-1">@ViewBag.eposta</p>
+        <br />
+        <img src="~/img/location.png" class="d-inline-block" />
+        <p class="d-inline-block ml-1">
+            @ViewBag.adres
+        </p>
+        <br />
+        <img src="~/img/telephone.png" class="d-inline-block" />
+        <p class="d-inline-block ml-1">@ViewBag.telefon</p>
+
+    </div>
+    <div class="col-md-4 mt-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3114.5606981693977!2d39.17487511486191!3d38.681962967219974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4076c0392d27f05b%3A0x4518a6344d591f49!2sF%C4%B1rat%20Teknokent!5e0!3m2!1str!2str!4v1615051730782!5m2!1str!2str" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="col-md-2"></div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-2"></div>
+
+    <div class="col-md-8 align-content-center">
+        @if (ViewBag.message != null)
+        {
+            <script>alert("Mesajınız Başarıyla İletildi");</script>
+            //****işlemden sonra form temizlenecek****
+        }
+        <form method="post" asp-controller="Home" asp-action="Iletisim">
+            <span class="badge badge-warning" asp-validation-for="Email"></span>
+            <input id="email" type="email" asp-for="Email" placeholder="Email Adresinizi girin" required class="form-control" />
+            <br />
+            <input type="text" asp-for="Konu" placeholder="Mesaj Konusunu girin" class="form-control" />
+            <br />
+            <span class="badge badge-warning" asp-validation-for="Mesaj"></span>
+            <textarea class="form-control" asp-for="Mesaj" placeholder="Mesajınızı girin" rows="4" required></textarea>
+            <br />
+            <button class="btn btn-outline-primary">Mesaj Gönder</button>
+        </form>
+    </div>
+
+    <div class="col-md-2"></div>
+    
+</div>

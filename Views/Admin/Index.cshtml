@@ -1,0 +1,18 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row mt-5">
+    <div class="col-md-8 ml-auto mr-auto">
+        <form method="post" asp-controller="Admin" asp-action="Index">
+            <h5>Başlık 1  </h5> <input type="text" name="b1" class="form-control" required value="@ViewBag.b1" />
+            <br />
+            <h5>Başlık 2  </h5> <input type="text" name="b2" class="form-control" required value="@ViewBag.b2" />
+            <br />
+            <h5>Hakkımızda  </h5> <textarea name="hakkimizda" class="form-control" required rows="7">@ViewBag.hakkimizda</textarea>
+            <button class="btn btn-primary mt-2">GÜNCELLE</button>
+        </form>
+    </div>
+</div>

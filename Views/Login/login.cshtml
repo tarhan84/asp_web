@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+
+}
+@model SmartSense.Models.LoginModel
+
+<div class="row mt-5">
+    <div class="col-md-3"></div>
+
+    <div class="col-md-6 mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="text-center"><b>Admin Girişi</b></h3>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-controller="Login" asp-action="login">
+                    @if (ViewBag.loginError != null)
+                    {
+                        <span class="badge badge-warning">@ViewBag.loginError</span>
+                    }
+                    <span class="badge badge-warning" asp-validation-for="email"></span>
+                    <input type="email" asp-for="email" placeholder="Email Adresinizi Girin" required class="form-control" />
+                    <br />
+                    <span class="badge badge-warning" asp-validation-for="sifre"></span>
+                    <input type="password" asp-for="sifre" placeholder="Şifrenizi Girin" required class="form-control" />
+                    <br />
+                    <button class="btn btn-primary btn-block">GİRİŞ</button>
+                </form>
+            </div>
+            <div class="card-footer">
+                <a href="#" class="card-link">Şifremi Unuttum</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3"></div>
+</div>
+

@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row mt-5">
+    <div class="col-md-5 ml-auto mr-auto">
+        <div class="card">
+            <div class="card-header">
+               <p><b>Şifre Sıfırlama</b></p>
+            </div>
+
+            <div class="card-body">
+                @if (ViewBag.message != null)
+                {
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        @ViewBag.message
+                    </div>
+                }
+                <form method="post" asp-action="resetPassword" asp-controller="Login">
+                    <input type="password" class="form-control" required name="currentPass" placeholder="Şifrenizi girin" />
+                    <br />
+                    <input id="pass" type="password" required class="form-control" name="newPass" placeholder="Yeni şifre girin" />
+                    <br />
+                    <input id="passre" oninput="onInputFunc()" type="password" class="form-control" name="newPassRe" placeholder="Şifreyi tekrar girin" />
+                    <br />
+                    <button class="btn btn-primary">KAYDET</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

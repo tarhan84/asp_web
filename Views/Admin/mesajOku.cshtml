@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Mesaj";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-8 ml-auto mr-auto">
+        <div class="card blockquote mt-4 ml-auto mr-auto">
+            <div class="card-header">
+                <p>@ViewBag.gonderen</p>   <p style="float:right;">@ViewBag.tarih</p>
+            </div>
+
+            <div class="card-body">
+                <p><b>@ViewBag.konu</b></p><br/>
+                <p>@ViewBag.mesaj</p>     
+            </div>
+            <div class="card-footer">
+                <form method="post" asp-action="mesajGonder" asp-controller="Admin">
+                    <input type="hidden" name="eposta" value="@ViewBag.gonderen"/>
+                    <input type="hidden" name="konu" value="@ViewBag.konu" />
+                    <textarea class="form-control" name="mesaj" placeholder="Bu Mesajı Yanıtlayın" rows="4" required></textarea>
+                    <button class="btn btn-success mt-1">GÖNDER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
